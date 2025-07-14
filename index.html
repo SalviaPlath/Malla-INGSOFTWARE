@@ -1,151 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Malla Interactiva Ingeniería de Software</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
   <h1>📘 Malla Interactiva - Ingeniería de Software</h1>
+  <div class="malla">
 
-  <div class="semestres">
-    <!-- Semestres del I al X -->
-    <div class="semestre">
+    <div class="columna">
       <h2>I Semestre</h2>
-      <ul>
-        <li>Matemáticas Básicas</li>
-        <li>Álgebra Lineal</li>
-        <li>Orientación a la Ingeniería</li>
-        <li>Lógica de Programación</li>
-        <li>Cátedra Manuela Beltrán</li>
-        <li>Teoría General de Sistemas</li>
-        <li>Comunicación Oral y Escrita</li>
-        <li>Inglés Inicial</li>
-      </ul>
+      <div class="materia" data-id="matematicas_basicas" data-prereq="">Matemáticas Básicas</div>
+      <div class="materia" data-id="algebra_lineal" data-prereq="">Álgebra Lineal</div>
+      <div class="materia" data-id="orientacion" data-prereq="">Orientación a la Ingeniería</div>
+      <div class="materia" data-id="logica" data-prereq="">Lógica de Programación</div>
+      <div class="materia" data-id="catedra" data-prereq="">Cátedra Manuela Beltrán</div>
+      <div class="materia" data-id="teoria_sistemas" data-prereq="">Teoría General de Sistemas</div>
+      <div class="materia" data-id="comunicacion" data-prereq="">Comunicación Oral y Escrita</div>
+      <div class="materia" data-id="ingles_inicial" data-prereq="">Inglés Inicial</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>II Semestre</h2>
-      <ul>
-        <li>Cálculo Diferencial</li>
-        <li>Física Mecánica y Laboratorio</li>
-        <li>Programación Orientada a Objetos</li>
-        <li>Arquitectura de Hardware</li>
-        <li>Electiva</li>
-        <li>Inglés Básico I</li>
-      </ul>
+      <div class="materia" data-id="calculo_dif" data-prereq="matematicas_basicas">Cálculo Diferencial</div>
+      <div class="materia" data-id="fisica_mec" data-prereq="">Física Mecánica y Laboratorio</div>
+      <div class="materia" data-id="poo" data-prereq="logica">Programación Orientada a Objetos</div>
+      <div class="materia" data-id="hardware" data-prereq="">Arquitectura de Hardware</div>
+      <div class="materia" data-id="electiva1" data-prereq="">Electiva</div>
+      <div class="materia" data-id="ingles1" data-prereq="ingles_inicial">Inglés Básico I</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>III Semestre</h2>
-      <ul>
-        <li>Cálculo Integral</li>
-        <li>Física Óptica, Ondas y Laboratorio</li>
-        <li>Estructura de Datos</li>
-        <li>Fundamentos de Investigación</li>
-        <li>Filosofía</li>
-        <li>Electiva</li>
-        <li>Inglés Básico II</li>
-      </ul>
+      <div class="materia" data-id="calculo_int" data-prereq="calculo_dif">Cálculo Integral</div>
+      <div class="materia" data-id="fisica_ondas" data-prereq="fisica_mec">Física Óptica, Ondas y Laboratorio</div>
+      <div class="materia" data-id="estructura" data-prereq="poo">Estructura de Datos</div>
+      <div class="materia" data-id="invest_fund" data-prereq="">Fundamentos de Investigación</div>
+      <div class="materia" data-id="filosofia" data-prereq="">Filosofía</div>
+      <div class="materia" data-id="electiva2" data-prereq="">Electiva</div>
+      <div class="materia" data-id="ingles2" data-prereq="ingles1">Inglés Básico II</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>IV Semestre</h2>
-      <ul>
-        <li>Ecuaciones Diferenciales</li>
-        <li>Cálculo Vectorial</li>
-        <li>Física Electromagnética y Laboratorio</li>
-        <li>Contabilidad General</li>
-        <li>Análisis y Diseño del Software</li>
-        <li>Infraestructura Tecnológica I</li>
-        <li>Estrategias del Pensamiento</li>
-        <li>Inglés Pre-intermedio</li>
-      </ul>
+      <div class="materia" data-id="ecuaciones" data-prereq="calculo_int">Ecuaciones Diferenciales</div>
+      <div class="materia" data-id="vectorial" data-prereq="calculo_int">Cálculo Vectorial</div>
+      <div class="materia" data-id="fisica_em" data-prereq="fisica_ondas">Física Electromagnética y Laboratorio</div>
+      <div class="materia" data-id="contabilidad" data-prereq="">Contabilidad General</div>
+      <div class="materia" data-id="ads" data-prereq="estructura">Análisis y Diseño del Software</div>
+      <div class="materia" data-id="infra1" data-prereq="hardware">Infraestructura Tecnológica I</div>
+      <div class="materia" data-id="estrategias" data-prereq="invest_fund">Estrategias del Pensamiento</div>
+      <div class="materia" data-id="ingles3" data-prereq="ingles2">Inglés Pre-intermedio</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>V Semestre</h2>
-      <ul>
-        <li>Matemáticas Especiales</li>
-        <li>Métodos Numéricos</li>
-        <li>Costos y Presupuestos</li>
-        <li>Teoría de Bases de Datos</li>
-        <li>Infraestructura Tecnológica II</li>
-        <li>Investigación Cualitativa</li>
-        <li>Constitución Política</li>
-        <li>Inglés Intermedio</li>
-      </ul>
+      <div class="materia" data-id="mates_esp" data-prereq="ecuaciones">Matemáticas Especiales</div>
+      <div class="materia" data-id="metodos" data-prereq="mates_esp">Métodos Numéricos</div>
+      <div class="materia" data-id="costos" data-prereq="contabilidad">Costos y Presupuestos</div>
+      <div class="materia" data-id="bd" data-prereq="estructura">Teoría de Bases de Datos</div>
+      <div class="materia" data-id="infra2" data-prereq="infra1">Infraestructura Tecnológica II</div>
+      <div class="materia" data-id="invest_cual" data-prereq="invest_fund">Investigación Cualitativa</div>
+      <div class="materia" data-id="constitucion" data-prereq="">Constitución Política</div>
+      <div class="materia" data-id="ingles4" data-prereq="ingles3">Inglés Intermedio</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>VI Semestre</h2>
-      <ul>
-        <li>Matemáticas Discretas</li>
-        <li>Probabilidad y Estadística</li>
-        <li>Administración</li>
-        <li>Patrones y Metodologías</li>
-        <li>Taller de Programación</li>
-        <li>Sistemas Operativos</li>
-        <li>Investigación Cuantitativa</li>
-        <li>Inglés Intermedio Alto</li>
-      </ul>
+      <div class="materia" data-id="discretas" data-prereq="mates_esp">Matemáticas Discretas</div>
+      <div class="materia" data-id="probabilidad" data-prereq="discretas">Probabilidad y Estadística</div>
+      <div class="materia" data-id="admin" data-prereq="costos">Administración</div>
+      <div class="materia" data-id="patrones" data-prereq="ads">Patrones y Metodologías</div>
+      <div class="materia" data-id="taller" data-prereq="estructura">Taller de Programación</div>
+      <div class="materia" data-id="so" data-prereq="infra2">Sistemas Operativos</div>
+      <div class="materia" data-id="invest_cuant" data-prereq="invest_cual">Investigación Cuantitativa</div>
+      <div class="materia" data-id="ingles5" data-prereq="ingles4">Inglés Intermedio Alto</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>VII Semestre</h2>
-      <ul>
-        <li>Economía de Empresa</li>
-        <li>Arquitectura de Software</li>
-        <li>Sistemas Transaccionales</li>
-        <li>Sistemas Distribuidos</li>
-        <li>Electiva</li>
-        <li>Proyecto de Investigación I</li>
-        <li>Inglés Avanzado</li>
-      </ul>
+      <div class="materia" data-id="economia" data-prereq="admin">Economía de Empresa</div>
+      <div class="materia" data-id="arquitectura_sw" data-prereq="ads">Arquitectura de Software</div>
+      <div class="materia" data-id="transaccionales" data-prereq="bd">Sistemas Transaccionales</div>
+      <div class="materia" data-id="distribuidos" data-prereq="so">Sistemas Distribuidos</div>
+      <div class="materia" data-id="electiva3" data-prereq="">Electiva</div>
+      <div class="materia" data-id="proy1" data-prereq="invest_cuant">Proyecto de Investigación I</div>
+      <div class="materia" data-id="ingles6" data-prereq="ingles5">Inglés Avanzado</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>VIII Semestre</h2>
-      <ul>
-        <li>Optimización Lineal</li>
-        <li>Estándares y Métricas</li>
-        <li>Inteligencia de Negocios</li>
-        <li>Ingeniería Web I</li>
-        <li>Computación Gráfica</li>
-        <li>Proyecto de Investigación II</li>
-        <li>Ética</li>
-      </ul>
+      <div class="materia" data-id="optimizacion" data-prereq="mates_esp">Optimización Lineal</div>
+      <div class="materia" data-id="metricas" data-prereq="patrones">Estándares y Métricas</div>
+      <div class="materia" data-id="negocios" data-prereq="transaccionales">Inteligencia de Negocios</div>
+      <div class="materia" data-id="web1" data-prereq="arquitectura_sw">Ingeniería Web I</div>
+      <div class="materia" data-id="grafica" data-prereq="discretas">Computación Gráfica</div>
+      <div class="materia" data-id="proy2" data-prereq="proy1">Proyecto de Investigación II</div>
+      <div class="materia" data-id="etica" data-prereq="">Ética</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>IX Semestre</h2>
-      <ul>
-        <li>Modelamiento Estocástico</li>
-        <li>Desarrollo de Software Seguro</li>
-        <li>Sistemas Expertos</li>
-        <li>Ingeniería Web II</li>
-        <li>Diseño de Interfaces</li>
-        <li>Nuevas Tecnologías</li>
-        <li>Proyecto de Investigación III</li>
-      </ul>
+      <div class="materia" data-id="modelamiento" data-prereq="optimizacion">Modelamiento Estocástico</div>
+      <div class="materia" data-id="seguro" data-prereq="web1">Desarrollo de Software Seguro</div>
+      <div class="materia" data-id="expertos" data-prereq="distribuidos">Sistemas Expertos</div>
+      <div class="materia" data-id="web2" data-prereq="web1">Ingeniería Web II</div>
+      <div class="materia" data-id="interfaces" data-prereq="grafica">Diseño de Interfaces</div>
+      <div class="materia" data-id="nuevastec" data-prereq="transaccionales">Nuevas Tecnologías</div>
+      <div class="materia" data-id="proy3" data-prereq="proy2">Proyecto de Investigación III</div>
     </div>
 
-    <div class="semestre">
+    <div class="columna">
       <h2>X Semestre</h2>
-      <ul>
-        <li>Gerencia de Proyectos</li>
-        <li>Inteligencia Artificial</li>
-        <li>Legislación Informática</li>
-        <li>Práctica Empresarial</li>
-        <li>Computación Móvil</li>
-        <li>Proyecto de Investigación IV</li>
-        <li>Cerebro</li>
-        <li>Educación Ambiental</li>
-      </ul>
+      <div class="materia" data-id="gerencia" data-prereq="arquitectura_sw">Gerencia de Proyectos</div>
+      <div class="materia" data-id="ia" data-prereq="expertos">Inteligencia Artificial</div>
+      <div class="materia" data-id="legislacion" data-prereq="">Legislación Informática</div>
+      <div class="materia" data-id="practica" data-prereq="proy3">Práctica Empresarial</div>
+      <div class="materia" data-id="movil" data-prereq="web2">Computación Móvil</div>
+      <div class="materia" data-id="proy4" data-prereq="proy3">Proyecto de Investigación IV</div>
+      <div class="materia" data-id="cerebro" data-prereq="">Cerebro</div>
+      <div class="materia" data-id="ambiental" data-prereq="">Educación Ambiental</div>
     </div>
-  </div>
 
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
