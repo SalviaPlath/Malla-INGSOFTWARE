@@ -51,11 +51,4 @@ h1 {
 
 .materia.bloqueada {
   background: #ccc;
-  color: #777;
-  pointer-events: none;
-}
-
-.materia.seleccionada {
-  background-color: #27ae60 !important;
-  color: white;
-}
+  color
